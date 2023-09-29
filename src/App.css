@@ -1,9 +1,23 @@
+.navbar-bg{
+  background-color: transparent;
+}
 .navbar{
   padding-right: 60px;
 }
 .li-items{
   padding: 20px;
-  color: black;
+  color: white;
   font-size: 13px;
+  text-decoration: none;
+}
+
+.btn{
+  background-color: blueviolet;
+
+}
+
+.image-1{
+  opacity: 0.5px;
+  
 }
 

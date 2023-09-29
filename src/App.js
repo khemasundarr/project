@@ -1,7 +1,9 @@
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Pages/Navbar";
+import Landingpage from "./Pages/Landingpage";
 import Home from "./Pages/Home";
 import Demos from "./Pages/Demos";
 import Properties from "./Pages/Properties";
@@ -10,7 +12,7 @@ import Features from "./Pages/Features";
 import Pages from "./Pages/Pages";
 import Login from "./Pages/Login";
 import Signup from"./Pages/Signup";
-import submitproperty from"./Pages/submitproperty";
+import Submitpropertys from"./Pages/Submitpropertys";
 
 
 function App() {
@@ -18,15 +20,16 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route path='/'home={<Home/>}/>
-        <Route path="/"demos={<Demos/>}/>
-        <Route path="/"properties={<Properties/>}/>
-        <Route path="/"owners={<Owners/>}/>
-        <Route path="/"features={<Features/>}/>
-        <Route path="/"pages={<Pages/>}/>
-        <Route path="/"login={<Login/>}/>
-        <Route path="/"signup={<Signup/>}/>
-        <Route path="/"submitproperty={<Submitproperty/>}/>
+        <Route path="/" element={<Landingpage/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path="/demos"element={<Demos/>}/>
+        <Route path="/properties"element={<Properties/>}/>
+        <Route path="/owners"element={<Owners/>}/>
+        <Route path="/features"element={<Features/>}/>
+        <Route path="/pages"element={<Pages/>}/>
+        <Route path="/login"element={<Login/>}/>
+        <Route path="/signup"element={<Signup/>}/>
+        <Route path="/submitpropertys"element={<Submitpropertys/>}/>
       </Routes>
       
     </div>
