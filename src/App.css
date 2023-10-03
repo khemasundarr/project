@@ -1,13 +1,19 @@
 .navbar-bg{
-  background-color: transparent;
+  background-color:whitesmoke;
 }
+.logo{ 
+  color: black;
+  
+}
+
 .navbar{
   padding-right: 60px;
 }
 .li-items{
   padding: 20px;
-  color: white;
-  font-size: 13px;
+  color:black;
+  font-size: 15px;
+  font-weight: 50px;
   text-decoration: none;
 }
 
@@ -16,8 +22,36 @@
 
 }
 
-.image-1{
-  opacity: 0.5px;
+.hems{
+padding-right:450px;
+padding-bottom: 120px;
+text-transform: capitalize;
+color:white;
   
 }
+.rent{
+  padding: 80px;
+  padding-bottom: 3px;
+  padding-left: 39px;
+}
+.head{
+  font-size: 45px;
+}
+.price{
+  font-size: 20px;
+}
+.img{
+  height: 100vh;
+}
+
+
+.cards{
+  margin: 10px;
+}
+.item{
+  flex-wrap:wrap ;
+  
+  
+}
+
 

@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className='navbar navbar-expand-lg navbar-bg fixed-top'>
     <div className='container'>
-        <img className='img'src='https://mainwprentals.b-cdn.net/wp-content/uploads/2021/09/main_transparent.png'alt='img'/>
+        <img className="logo"src='https://mainwprentals.b-cdn.net/wp-content/uploads/2021/09/main_transparent.png'alt='img'/>
         </div>
         <div>
         <ul className='navbar-nav '>
