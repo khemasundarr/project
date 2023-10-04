@@ -1,33 +1,36 @@
 import Carousel from 'react-bootstrap/Carousel';
 import React from 'react'
 import { CarouselCaption } from 'react-bootstrap';
-
-
+import {IoLocationOutline} from 'react-icons/io5';
+import {LiaHomeSolid} from "react-icons/lia";
 const data = [
     {
         img: 'https://mainwprentals.b-cdn.net/wp-content/uploads/2015/04/blue-400x314.jpg',
         price: '$56/night',
         title:"modern villa with pool",
         location:"East Side,New York",
-
+        home:"Villa / Entire home",
     },
     {
         img: "https://mainwprentals.b-cdn.net/wp-content/uploads/2015/04/decor_nice-400x314.jpg",
         price:'$65/night',
         title:" Victorian Bed & Breakfast",
         location:"mattapan,boston",
+        home:"B & B / Shared room",
     },
     {
       img: 'https://mainwprentals.b-cdn.net/wp-content/uploads/2015/04/book2_small-1-400x314.jpg',
       price: '$102/night',
         title:"Charming Private Room",
         location:"Glover park,Washington",
+        home:"House / Private room",
     },
     {
       img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2017/01/xx-400x314.jpg",
       price: '$30/night',
         title:"Charm villa to Rent",
         location:"Brightwood,baltimore",
+        home:"Villa / Entire home",
     
     
     },
@@ -36,14 +39,59 @@ const data = [
       price: '$23/night',
         title:"Modern condo with lake view",
         location:"arlington,baltimore",
+        home:"Dorm / Shared room",
     },
     {
       img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2015/04/19-2-400x314.jpeg",
       price: '$500/night',
         title:"Private cozy Apartment",
         location:"glover park,washington",
+        home:"Bungalow / Entire home ",
     },
-]
+    ]
+    const type=[
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2015/04/white_booking_versionwebp_-1920x790-1-1170x790.webp",
+           price:"$200/night",
+           title:"Nice Condo in Penn Station",
+           location:"Manhattan, New York",
+        }, 
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2015/04/decor_nice.jpg",
+            price:"$65/night",
+            title:"Victorian Bed & Breakfast",
+            location:"Mattapan, Boston",
+        },
+
+    ]
+    const over=[
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2023/03/14.jpeg",
+            title:"",
+            location:"",
+        },
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2023/03/interior_july_2019-1170x921-webp.webp",
+            title:"",
+            location:"",
+        },
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2023/03/8.jpeg",
+            title:"",
+            location:"",
+        },
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2023/03/category-webp.webp",
+            title:"",
+            location:"",
+        },
+        {
+            img:"https://mainwprentals.b-cdn.net/wp-content/uploads/2023/03/5.jpeg",
+            title:"",
+            location:"",
+        },
+
+    ]
 
 function Landingpage() {
     return (
@@ -88,7 +136,7 @@ function Landingpage() {
             <h2> Featured listings to rent</h2> 
               <p> The most trendy accommodations available</p>
               </div> 
-            <div className='item d-flex justify-content-center align-item-center'>
+            <div className='item d-flex justify-content-center align-item-center '>
                 {data.map((each) => {
                     return (                    
                     <div className='cards'>
@@ -96,22 +144,66 @@ function Landingpage() {
                         <p className='price'>{each.price}</p>
                         <div>
                         <h3 className='title'>{each.title} </h3>
-                        <p className='location'>{each.location} </p>
-                        
+                        <p className='location'><IoLocationOutline/> {each.location} </p>
+                        <p className='home'><LiaHomeSolid/>{each.home} </p>
                         </div> 
                     </div>
                     )
                 })}
             </div>
         </div>
-              
-      
-      
-      </>
+        <div className='container-fluid'>
+            <div className='two '>
+                <h3>Featured properties</h3>
+                <p>The most trendy listings on our website</p>
+            </div>
+            <div >
+                <ul className='d=flex row p-0 d-flex'>
+                { type.map((each)=>{
+                    return (
+                            <li className=' items col-xl-6'>
+                            <img className='w-100 p-5 ' src={each.img}/>
+                            <div className='pri'>
+                            <p className='price '>{each.price} </p>
+                            <h3 className='titles'>{each.title}  </h3>
+                            <p className='locations'>{each.location}</p>
+                            </div>
+                             </li>
+
+                    )
+                })}
+                </ul>
+            </div>
+        </div>  
+        <div className='container-fluid'>
+            <div className='five '>
+                <h3>Best places to rent</h3>
+                <p>How to travel on a budget around the world</p>
+            </div>
+            <div >
+                <ul className='d=flex row p-0 d-flex'>
+                { type.map((each)=>{
+                    return (
+                            <li className=' itemss'>
+                            <img className='w-100 ' src={each.img}/>
+                            <div className='prices'>
+                            <p className='price '>{each.price} </p>
+                            <h3 className='titles'>{each.title}  </h3>
+                            <p className='locations'>{each.location}</p>
+                            </div>
+                             </li>
+
+                    )
+                })}
+                </ul>
+            </div>
+        </div>        
+     </>
     )
 }
 
 
 export default Landingpage
+
 
 

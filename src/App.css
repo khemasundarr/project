@@ -49,9 +49,24 @@ color:white;
   margin: 10px;
 }
 .item{
-  flex-wrap:wrap ;
-  
+  flex-wrap:wrap 
+}
+.items{
+  flex-wrap: wrap;
+}
+.two{
+  padding-top: 10px;
+  margin-left: 90px;
+  position: absolute;
+
+}
+.items{
+  padding: 50px;
   
 }
-
-
+li{
+  list-style-type: none;
+}
+.pri{
+  margin-left: 50px;
+}
